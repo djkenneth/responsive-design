@@ -1,0 +1,54 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #272727;
+  color: #fff;
+}
+
+.container .main {
+  width: 80%;
+  margin: 0 auto;
+  /* include the mixin */
+  /* include the mixin with argument */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.container .main__paragraph-1, .container .main__paragraph-2 {
+  font-size: 1.5rem;
+  padding: 20px 0;
+  /* map the variable */
+  /* call the function */
+  font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .container .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.light {
+  background: white;
+  color: black;
+}
+/*# sourceMappingURL=style.min.css.map */

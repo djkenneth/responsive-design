@@ -1,0 +1,42 @@
+@import './reset';
+@import './variables';
+@import './function';
+@import './mixin';
+
+body {
+    background: $primary-color;
+    color: $text-color;
+}
+
+.container {
+    .main {
+        width: 80%;
+        margin: 0 auto;
+
+        /* include the mixin */
+        // @include flexCenter
+        /* include the mixin with argument */
+        @include flexCenter(row);
+
+        &__paragraph-1 {
+            font-size: 1.5rem;
+            padding: 20px 0;
+            /* map the variable */
+            // font-weight: map-get($font-weight, bold);
+            /* call the function */
+            font-weight: weight(bold);
+        }
+
+        &__paragraph-2 {
+            @extend .main__paragraph-1
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+}
+
+.light {
+    @include theme(true);
+}
